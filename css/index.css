@@ -24,8 +24,23 @@ a {
   text-decoration: none;
 }
 
+h1,
+h2,
+h3,
 p {
   color: white;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .word-highlight {
@@ -37,12 +52,12 @@ p {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(248, 233, 161, 0.7);
+    box-shadow: 0 0 0 0 rgba(36, 48, 161, 0.7);
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(248, 233, 161, 0);
+    box-shadow: 0 0 0 10px rgba(36, 48, 94, 0);
   }
 
   100% {
@@ -188,10 +203,16 @@ footer {
   justify-content: space-around;
   padding: 10px;
   bottom: 0;
+  margin-top: 50px;
 }
 
 footer > * {
   margin: 10px 0;
+}
+
+footer > div > a > p,
+.copyright > p {
+  font-size: 1rem;
 }
 
 footer > div > a > i {
@@ -275,12 +296,13 @@ footer > div > a > i {
 
 .find-out-more {
   margin: auto;
+  margin: 20px 0;
   width: 175px;
   font-size: 1.5rem;
-  background-color: var(--yellow);
-  color: var(--red);
+  background-color: var(--dark-blue);
+  color: white;
   padding: 5px;
-  border: 3px solid var(--yellow);
+  border: 3px solid var(--dark-blue);
   border-radius: 5px;
   animation: pulse 2s infinite;
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
@@ -359,8 +381,85 @@ footer > div > a > i {
 }
 
 /*ABOUT*/
+.profile {
+  margin: 0 auto;
+  padding: 0 10vw;
+  text-align: center;
+}
+
+.profile > * {
+  margin: 20px 0;
+}
+
+.gap {
+  margin: 75px 0;
+}
+
+.code-card-container {
+  margin: 20px 0;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: center;
+}
+
+.code-card {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.code-card-img {
+  height: 100px;
+  width: 100px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  object-fit: contain;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.closer-look-btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.closer-look-btns > button {
+  margin: 20px 0;
+}
 
 /*About Desktop*/
 @media screen and (min-width: 768px) {
-  
+  #fe-be-desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #front-end,
+  #back-end {
+    min-width: 300px;
+    max-width: 400px;
+  }
+
+  .code-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .closer-look-btns {
+    flex-direction: row;
+  }
+
+  .code-card {
+    transition: all 1s ease-out;
+  }
+
+  .code-card:hover {
+    transition: all 1s ease-out;
+    transform: scale(1.05);
+  }
 }
