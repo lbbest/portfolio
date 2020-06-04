@@ -51,17 +51,34 @@ h3 {
 
 @keyframes pulse {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(36, 48, 161, 0.7);
+    /* transform: scale(0.95); */
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   }
 
   70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(36, 48, 94, 0);
+    /* transform: scale(1); */
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
   }
 
   100% {
-    transform: scale(0.95);
+    /* transform: scale(0.95); */
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes pulse-hover {
+  0% {
+    /* transform: scale(0.95); */
+    box-shadow: 0 0 0 0 rgba(247, 108, 108, 0.7);
+  }
+
+  70% {
+    /* transform: scale(1); */
+    box-shadow: 0 0 0 10px rgba(247, 108, 108, 0);
+  }
+
+  100% {
+    /* transform: scale(0.95); */
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
@@ -278,6 +295,7 @@ footer > div > a > i {
 .pic-of-me {
   height: 200px;
   width: 200px;
+  border: 5px solid white;
   border-radius: 50%;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
 }
@@ -299,13 +317,14 @@ footer > div > a > i {
   margin: 20px 0;
   width: 175px;
   font-size: 1.5rem;
-  background-color: var(--dark-blue);
+  background-color: var(--light-blue);
   color: white;
-  padding: 5px;
-  border: 3px solid var(--dark-blue);
+  padding: 7px;
+  border: 3px solid white;
   border-radius: 5px;
   animation: pulse 3s infinite;
-  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+  transition: 0.2s ease-out;
+  /* filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3)); */
 }
 
 .home-divider {
@@ -359,6 +378,10 @@ footer > div > a > i {
 @media screen and (min-width: 768px) {
   .find-out-more:hover {
     cursor: pointer;
+    transition: 1s;
+    color: var(--red);
+    border: 3px solid var(--red);
+    animation: pulse-hover 3s 1;
   }
 
   .card-container:hover > .card {
@@ -468,4 +491,55 @@ footer > div > a > i {
 
 #portfolio {
   min-height: 90vh;
+}
+
+/*CONTACT*/
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form > label {
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+.contact-form > input,
+textarea {
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  width: 100%;
+}
+
+.contact-form > textarea {
+  border: 2px solid white;
+  border-radius: 5px;
+}
+
+.contact-form > button {
+  margin-top: 20px;
+  height: 50px;
+  width: 100px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form {
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 20px;
+  }
 }
