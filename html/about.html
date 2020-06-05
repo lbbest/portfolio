@@ -223,10 +223,9 @@
       <div class="gap"></div>
       <div class="profile">
         <h3>Take A Closer Look:</h3>
-        <p class="dot-break">.<br />.<br />.</p>
         <div class="closer-look-btns">
-          <a class="find-out-more" href="../content/Liam Best CV.pdf" download>
-            Download My Resume
+          <a id="modal-btn" class="find-out-more">
+            View/Download My Resume
             <i class="fa fa-angle-double-right" aria-hidden="true"></i>
           </a>
           <a class="find-out-more" href="portfolio.html">
@@ -255,6 +254,29 @@
         </div>
       </div>
     </div>
+
+    <!-- MODAL START -->
+    <div id="cv-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5>Liam Best CV</h5>
+          <span id="x">&times;</span>
+        </div>
+        <img src="../content/Liam Best CV.png" alt="cv" class="modal-img" />
+        <div class="modal-footer">
+          <a id="close" class="modal-btn">Close</a>
+          <a
+            id="modal-download"
+            class="modal-btn"
+            href="../content/Liam Best CV.pdf"
+            download
+            >Download</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- MODAL END -->
+
     <footer>
       <div class="footer-links">
         <a href="about.html">
