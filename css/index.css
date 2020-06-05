@@ -481,7 +481,7 @@ footer > div > a > i {
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 2% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 10px;
@@ -493,6 +493,7 @@ footer > div > a > i {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  top: 0;
   animation: animatemodal 1s 1;
 }
 
@@ -629,6 +630,12 @@ textarea {
   border: none;
   border-bottom: 2px solid white;
   width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+.contact-form > textarea {
+  height: 200px;
 }
 
 .contact-form > input:focus,
@@ -657,7 +664,6 @@ textarea:focus {
 
 @media screen and (min-width: 768px) {
   .contact-form {
-    border: 2px solid white;
     border-radius: 10px;
     padding: 20px;
   }
@@ -669,4 +675,11 @@ textarea:focus {
     border: 3px solid var(--red);
     animation: pulse-hover 3s 1;
   }
+}
+
+/*SUCCESS*/
+
+.success-img {
+  height: 30vh;
+  margin-bottom: 20px;
 }

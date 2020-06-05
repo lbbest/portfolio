@@ -11,6 +11,7 @@
     />
     <script src="https://use.fontawesome.com/96c874f761.js"></script>
   </head>
+
   <body>
     <nav class="navbar">
       <span class="navbar-toggle" id="js-navbar-toggle">
@@ -32,27 +33,17 @@
     <div class="content-container" id="portfolio">
       <div class="profile">
         <h2>Contact Me</h2>
-        <form
-          class="contact-form"
-          id="form"
-          action="https://formsubmit.co/liambbest@googlemail.com"
-          method="POST"
-        >
-          <label for="name">Your name:</label>
-          <input type="text" name="name" />
-          <label for="email">Your email address:</label>
-          <input type="email" name="email" />
-          <label for="message">Your message:</label>
-          <textarea name="message"></textarea>
-          <input
-            type="hidden"
-            name="_next"
-            value="http://127.0.0.1:5500/html/success.html"
-          />
-          <button type="submit" form="form" value="Send">
-            Send
-          </button>
-        </form>
+        <div class="gap"></div>
+        <div class="success">
+          <img src="../content/tick.png" alt="Success" class="success-img" />
+          <h2>Success!</h2>
+          <p>Your message has been delivered</p>
+        </div>
+        <div class="gap"></div>
+        <a class="find-out-more" href="index.html"
+          >Return to Homepage
+          <i class="fa fa-angle-double-right" aria-hidden="true"></i
+        ></a>
       </div>
     </div>
     <footer>
